@@ -57,7 +57,7 @@
           <v-chart class="chart" :option="dashOpt2" />
         </el-card>
       </el-col>
-      <el-col :span="12">
+      <el-col :span="10">
         <el-card shadow="hover">
           <div class="card-header">
             <p class="card-header-title">订单动态</p>
@@ -67,7 +67,7 @@
         </el-card>
       </el-col>
 
-      <el-col :span="6">
+      <el-col :span="8">
         <el-card shadow="hover">
           <div class="card-header">
             <p class="card-header-title">柱状图</p>

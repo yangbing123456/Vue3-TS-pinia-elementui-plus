@@ -3,3 +3,13 @@ export interface Register {
   password: string
   email: string
 }
+
+export interface User {
+  id: number
+  name: string
+  password: string
+  email: string
+  phone: string
+  role: string
+  date: string
+}
