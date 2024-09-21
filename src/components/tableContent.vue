@@ -1,7 +1,10 @@
 <template>
   <div class="table">
+    <!-- 新增和设置 -->
     <div class="top">
+      <!-- 新增 -->
       <slot name="addBtn"></slot>
+      <!-- 刷新 设置 -->
       <div class="table-toolbar-right flex-center">
         <template v-if="multipleSelection.length > 0">
           <el-tooltip effect="dark" content="删除选中" placement="top">
@@ -33,12 +36,14 @@
         </el-tooltip>
       </div>
     </div>
+    <!-- 表格 -->
     <el-table
       :data="tableData"
       :style="{ width: '100%' }"
       border
       @selection-change="handleSelectionChange"
     >
+      <!-- <el-table-column type="selection" width="55" /> -->
       <template v-for="item in columns" :key="item.prop">
         <el-table-column
           v-if="item.visible"
