@@ -80,6 +80,7 @@
         </el-table-column>
       </template>
     </el-table>
+    <!-- 分页 -->
     <el-pagination
       style="margin-top: 16px"
       v-if="hasPagination"
@@ -92,7 +93,7 @@
     />
   </div>
 </template>
-<script setup lang="ts" name="">
+<script setup lang="ts" name="table">
 import { onMounted, type PropType, toRefs, ref } from 'vue'
 import { Delete, Edit, View, Refresh } from '@element-plus/icons-vue'
 import { ElMessageBox } from 'element-plus'

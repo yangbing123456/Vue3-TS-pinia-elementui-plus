@@ -29,6 +29,7 @@ const header = useHeaderStore()
   transition: left 0.3s ease-in-out;
   background: #eef0fc;
   overflow: hidden;
+  overflow-y: auto;
 }
 .content-collapse {
   left: 65px;

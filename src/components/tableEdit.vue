@@ -64,9 +64,9 @@
 </template>
 
 <script lang="ts" setup>
-import { FormOption } from '@/types/form-option'
-import { FormInstance, FormRules, UploadProps } from 'element-plus'
-import { PropType, ref } from 'vue'
+import { type FormOption } from '@/types/form-option'
+import type { FormInstance, FormRules, UploadProps } from 'element-plus'
+import { type PropType, ref } from 'vue'
 
 const { options, formData, edit, update } = defineProps({
   options: {

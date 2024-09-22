@@ -35,6 +35,7 @@
 <script setup lang="ts" name="">
 import { Options, type FormInstance } from 'element-plus'
 import { Search, Refresh } from '@element-plus/icons-vue'
+
 import { type PropType, ref } from 'vue'
 import { type FormOptionList } from '@/types/form-option'
 // defineProps(['query', 'options', 'search'])
@@ -70,9 +71,6 @@ function resetForm(formEl: FormInstance | undefined) {
   padding: 32px;
   margin-bottom: 16px;
   background-color: #fff;
-  // height: 80px;
   border-radius: 8px;
-  // display: flex;
-  // align-items: center;
 }
 </style>
