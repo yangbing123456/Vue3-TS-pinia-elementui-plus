@@ -9,4 +9,5 @@ export interface viewObj {
 export interface view {
   row: Object
   list: Array<viewObj>
+  column?: number
 }
