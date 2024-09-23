@@ -1,0 +1,40 @@
+{
+  "list": [
+    {
+      "id": 1,
+      "roleName": "张三",
+      "roleMark": "admin",
+      "roleStatus": true,
+      "rolePermissions": [
+        "0",
+        "1",
+        "11",
+        "12",
+        "13",
+        "2",
+        "21",
+        "22",
+        "23",
+        "24",
+        "3",
+        "31",
+        "32",
+        "33",
+        "331",
+        "332",
+        "4",
+        "41",
+        "42",
+        "5"
+      ]
+    },
+    {
+      "id": 2,
+      "roleName": "李四",
+      "roleMark": "user",
+      "roleStatus": true,
+      "rolePermissions": ["0", "1", "11", "12", "13"]
+    }
+  ],
+  "pageTotal": 2
+}

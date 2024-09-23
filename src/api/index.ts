@@ -10,3 +10,15 @@ export const getUserData = () => {
     method: 'get'
   })
 }
+
+/**
+ *
+ * @description:mock 角色管理接口
+ */
+
+export const getRoleData = () => {
+  return service({
+    url: '/mock/role.json',
+    method: 'get'
+  })
+}

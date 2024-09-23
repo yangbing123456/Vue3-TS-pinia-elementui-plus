@@ -42,6 +42,7 @@
       :style="{ width: '100%' }"
       border
       @selection-change="handleSelectionChange"
+      :row-key="rowKey"
     >
       <!-- <el-table-column type="selection" width="55" /> -->
       <template v-for="item in columns" :key="item.prop">
