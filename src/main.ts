@@ -18,6 +18,11 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component)
 }
 
+// 注册一个v-hello 指令  达到和v-show 一样的效果
+// app.directive('hello', (element, { value }) => {
+//   value ? (element.style.display = 'block') : (element.style.display = 'none')
+// })
+
 app.use(ElementuiPlus)
 app.use(router)
 app.use(pinia)

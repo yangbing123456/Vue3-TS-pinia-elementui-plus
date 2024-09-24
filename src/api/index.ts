@@ -22,3 +22,14 @@ export const getRoleData = () => {
     method: 'get'
   })
 }
+
+/**
+ *
+ * @description: mock基本表格数据
+ */
+export const getBasicData = () => {
+  return service({
+    url: '/mock/basicUser.json',
+    method: 'get'
+  })
+}

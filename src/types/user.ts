@@ -13,3 +13,13 @@ export interface User {
   role: string
   date: string
 }
+
+export interface basicUser {
+  id: number
+  userName: string
+  accountBalance: number
+  avatar?: string
+  accountStatus: boolean
+  address?: string
+  date?: string
+}

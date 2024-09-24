@@ -27,6 +27,11 @@ const routes = [
         path: '/system-menu',
         name: 'system-menu',
         component: () => import('@/views/system/menu.vue')
+      },
+      {
+        path: '/basic-table',
+        name: 'basic-table',
+        component: () => import('@/views/table/basicTable.vue')
       }
     ]
   },

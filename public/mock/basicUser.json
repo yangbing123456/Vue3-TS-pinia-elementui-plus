@@ -1,0 +1,41 @@
+{
+  "list": [
+    {
+      "id": 1,
+      "userName": "admin",
+      "accountBalance": 999,
+      "avatar": "https://lin-xin.gitee.io/images/post/wms.png",
+      "accountStatus": true,
+      "address": "成都市武侯区",
+      "date": "2024-09-24"
+    },
+    {
+      "id": 2,
+      "userName": "user",
+      "accountBalance": 222,
+      "avatar": "https://lin-xin.gitee.io/images/post/node3.png",
+      "accountStatus": true,
+      "address": "成都市武侯区",
+      "date": "2024-09-24"
+    },
+    {
+      "id": 3,
+      "userName": "张三",
+      "accountBalance": 111,
+      "avatar": "https://lin-xin.gitee.io/images/post/parcel.png",
+      "accountStatus": false,
+      "address": "成都市武侯区",
+      "date": "2024-09-24"
+    },
+    {
+      "id": 4,
+      "userName": "李四",
+      "accountBalance": 666,
+      "avatar": "https://lin-xin.gitee.io/images/post/notice.png",
+      "accountStatus": true,
+      "address": "成都市武侯区",
+      "date": "2024-09-24"
+    }
+  ],
+  "total": 4
+}

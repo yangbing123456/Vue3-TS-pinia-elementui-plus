@@ -31,5 +31,19 @@ export const menuData: Array<Menu> = [
         title: '菜单管理'
       }
     ]
+  },
+  {
+    id: 3,
+    title: '表格',
+    index: '3',
+    icon: 'Calendar',
+    children: [
+      {
+        id: 31,
+        pid: '3',
+        index: '/basic-table',
+        title: '基础表格'
+      }
+    ]
   }
 ]
