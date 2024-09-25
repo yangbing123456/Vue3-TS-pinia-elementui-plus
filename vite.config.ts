@@ -18,7 +18,7 @@ export default defineConfig({
   //   proxy: [
   //     {
   //       // 配置一个代理
-  //       target: 'https://api.example.com', // 要代理的服务器域名或地址
+  //       target: 'http://127.0.0.1:4523', // 要代理的服务器域名或地址
   //       changeOrigin: true, // 允许跨域
   //       ws: true, // 打开websocket
   //       pathRewrite: {
@@ -27,5 +27,19 @@ export default defineConfig({
   //       }
   //     }
   //   ]
+  // },
+  //   server: {
+  //     // port: "8080",
+  //     // disableHostCheck: true,
+  //     proxy: {
+  //         "/api": {
+  //             target: "http://127.0.0.1:4523",
+  //             ws: true,
+  //             changeOrigin: true,
+  //             pathRewrite: {
+  //                 "^/api": ""
+  //             }
+  //         }
+  //     }
   // }
 })

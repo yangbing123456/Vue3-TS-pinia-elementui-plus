@@ -55,7 +55,7 @@
           :align="item.align || 'center'"
         >
           <template #default="{ row, column, $index }" v-if="item.type === 'index'">
-            <!-- {{ getIndex($index) }} -->
+            {{ getIndex($index) }}
           </template>
           <template #default="{ row, column, $index }" v-if="!item.type">
             <slot :name="item.prop" :rows="row" :index="$index">
@@ -203,9 +203,9 @@ const handleDelete = (row: any) => {
     .catch(() => {})
 }
 
-// const getIndex = (index: number) => {
-//     return index + 1 + (currentPage.value - 1) * pageSize.value
-// }
+const getIndex = (index: number) => {
+  return index + 1 + (currentPage.value - 1) * pageSize.value
+}
 </script>
 <style scoped lang="scss">
 .table {

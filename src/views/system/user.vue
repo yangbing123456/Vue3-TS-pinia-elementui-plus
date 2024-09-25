@@ -8,8 +8,9 @@
       :total="page.total"
       :viewFunc="handleView"
       :delFunc="handleDelete"
-      :page-change="changePage"
+      :change-page="changePage"
       :editFunc="handleEdit"
+      :currentPage="page.index"
     >
       <template #addBtn>
         <el-button type="warning" :icon="CirclePlusFilled" @click="visible = true">新增</el-button>
@@ -77,14 +78,15 @@ const tableData = ref<Array<User>>([])
 const getList = async () => {
   const res = await getUserData()
   tableData.value = res.data.list
-  page.total = res.data.pageTotal
+  page.total = res.data.total
 }
 // getList()
 onMounted(() => {
   getList()
 })
 const changePage = (val: number) => {
-  ;(page.index = val), getList()
+  page.index = val
+  getList()
 }
 
 // 新增/编辑弹窗相关
