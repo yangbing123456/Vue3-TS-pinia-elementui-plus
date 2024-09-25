@@ -3,6 +3,7 @@
     <headerBar></headerBar>
     <siderBar></siderBar>
     <div class="content-box" :class="{ 'content-collapse': header.collapse }">
+      <tabs></tabs>
       <router-view></router-view>
     </div>
   </div>
@@ -10,9 +11,12 @@
 <script setup lang="ts" name="home">
 import headerBar from '@/components/header.vue'
 import siderBar from '@/components/siderBar.vue'
+import tabs from '@/components/tabs.vue'
+
 import { useHeaderStore } from '@/store/header'
 const header = useHeaderStore()
 </script>
+
 <style scoped lang="scss">
 .wrapper {
   height: 100vh;
