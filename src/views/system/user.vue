@@ -10,7 +10,7 @@
       :delFunc="handleDelete"
       :change-page="changePage"
       :editFunc="handleEdit"
-      :currentPage="page.index"
+      :currentPage="page.pageNum"
     >
       <template #addBtn>
         <el-button type="warning" :icon="CirclePlusFilled" @click="visible = true">新增</el-button>
@@ -68,8 +68,8 @@ let columns = ref([
   { prop: 'operator', label: '操作', width: 250 }
 ])
 const page = reactive({
-  index: 1,
-  size: 10,
+  pageNum: 1,
+  pageSize: 10,
   total: 0
 })
 
@@ -78,14 +78,14 @@ const tableData = ref<Array<User>>([])
 const getList = async () => {
   const res = await getUserData()
   tableData.value = res.data.list
-  page.total = res.data.total
+  page.total = res.data.pageTotal
 }
 // getList()
 onMounted(() => {
   getList()
 })
 const changePage = (val: number) => {
-  page.index = val
+  page.pageNum = val
   getList()
 }
 

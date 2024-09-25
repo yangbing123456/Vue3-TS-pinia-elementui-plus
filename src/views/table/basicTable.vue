@@ -4,7 +4,7 @@
     <tableSearch :query="query" :options="optionSearch" :search="search"></tableSearch>
     <!-- 表格 -->
     <tableContent :columns="columns" :tableData="tableData" :total="page.total" :viewFunc="handleView"
-				:delFunc="handleDelete" :editFunc="handleEdit" :refresh="BasicData" :currentPage="page.total"
+				:delFunc="handleDelete" :editFunc="handleEdit" :refresh="BasicData" :currentPage="page.pageNum"
 				:changePage="changePage">
         <!-- 新增按钮 -->
       <template #addBtn>
@@ -95,13 +95,13 @@ const tableData = ref<Array<basicUser>>([])
 const BasicData = async () => {
   const res = await getBasicData()
   tableData.value = res.data.list
-  page.total = res.data.total
+  page.total = res.data.pageTotal
 }
 BasicData()
 
 // 弹窗相关
 const changePage = (val: number) => {
-	page.total = val;
+	page.pageNum = val;
 	BasicData();
 };
 
@@ -184,7 +184,7 @@ const handleDelete = (row: basicUser) => {
 const page = reactive({
   total: 0,
   pageSize: 10,
-  pageNumber: 1
+  pageNum: 1
 })
 </script>
 

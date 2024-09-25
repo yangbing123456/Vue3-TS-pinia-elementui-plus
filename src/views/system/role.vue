@@ -11,8 +11,9 @@
       :total="page.total"
       :viewFunc="handleView"
       :delFunc="handleDelete"
-      :page-change="changePage"
+      :change-page="changePage"
       :editFunc="handleEdit"
+      :current-page="page.pageNum"
     >
       <template #addBtn>
         <el-button type="warning" :icon="CirclePlusFilled" @click="visible = true">新增</el-button>
@@ -85,7 +86,7 @@ const search = () => {
 }
 
 const changePage = (val: number) => {
-  ;(page.index = val), getList()
+  ;(page.pageNum = val), getList()
 }
 
 // 表格相关 表格表头列
@@ -188,8 +189,8 @@ const closeDialog = () => {
 }
 
 const page = reactive({
-  index: 1,
-  size: 10,
+  pageNum: 1,
+  pageSize: 10,
   total: 0
 })
 
